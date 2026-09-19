@@ -64,6 +64,22 @@ public static partial class Strings
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)] public readonly LocalizedString banuser = @"console";
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocaleCommand UnlockTitle = new LocaleCommand
+        {
+            Name = @"unlocktitle",
+            Description = @"Unlocks a title (by name, see resources/titles.json) for an online player.",
+            Help = @"unlocks a title for an online player"
+        };
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocaleCommand EquipTitle = new LocaleCommand
+        {
+            Name = @"equiptitle",
+            Description = @"Equips an already-unlocked title (by name) for an online player, showing it above their head. Use 'none' to remove their title.",
+            Help = @"equips a title for an online player, or 'none' to remove it"
+        };
+
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)] public readonly LocalizedString commandinfo = @"/?";
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
@@ -443,6 +459,20 @@ public static partial class Strings
             {
                 Name = @"player-name",
                 Description = @"the name of the player to change the access of"
+            };
+
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            public readonly LocaleArgument TargetTitle = new LocaleArgument
+            {
+                Name = @"player-name",
+                Description = @"the name of the online player to modify the titles of"
+            };
+
+            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            public readonly LocaleArgument TitleName = new LocaleArgument
+            {
+                Name = @"title-name",
+                Description = @"the name of the title, as defined in resources/titles.json"
             };
 
             [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

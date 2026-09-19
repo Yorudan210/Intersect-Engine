@@ -118,6 +118,9 @@ public static partial class PacketSender
             // Send our friend list over so the UI can adjust accordingly without having to open it client-side first.
             PacketSender.SendFriends(player);
 
+            // Send the player's unlocked/equipped titles so the Titles window can populate without a round trip.
+            PacketSender.SendUnlockedTitles(player);
+
             var pendingGuildInvite = player.PendingGuildInvite;
             // ReSharper disable once InvertIf
             if (pendingGuildInvite != default)
@@ -2229,6 +2232,23 @@ public static partial class PacketSender
         }
 
         player.SendPacket(new FriendsPacket(online, offline.ToArray()));
+    }
+
+    //UnlockedTitlesPacket
+    public static void SendUnlockedTitles(Player player)
+    {
+        if (player == null)
+        {
+            return;
+        }
+
+        var unlocked = player.UnlockedTitleIds
+            .Select(Intersect.Server.General.TitleManager.Get)
+            .Where(title => title != null)
+            .Select(title => title!)
+            .ToList();
+
+        player.SendPacket(new UnlockedTitlesPacket(unlocked, player.EquippedTitleId));
     }
 
     //FriendRequestPacket

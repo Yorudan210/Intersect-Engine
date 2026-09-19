@@ -90,6 +90,7 @@ internal sealed class BuiltinControlsProvider : IControlsProvider
             { Control.OpenSpells, new ControlMapping(new ControlBinding(Keys.None, Keys.K), ControlBinding.Default) },
             { Control.OpenFriends, new ControlMapping(new ControlBinding(Keys.None, Keys.F), ControlBinding.Default) },
             { Control.OpenGuild, new ControlMapping(new ControlBinding(Keys.None, Keys.G), ControlBinding.Default) },
+            { Control.OpenTitles, new ControlMapping(new ControlBinding(Keys.None, Keys.Y), ControlBinding.Default) },
             { Control.OpenSettings, new ControlMapping(new ControlBinding(Keys.None, Keys.O), ControlBinding.Default) },
             { Control.OpenDebugger, new ControlMapping(new ControlBinding(Keys.None, Keys.F2), ControlBinding.Default) },
             { Control.OpenAdminPanel, new ControlMapping(new ControlBinding(Keys.None, Keys.Insert), ControlBinding.Default) },

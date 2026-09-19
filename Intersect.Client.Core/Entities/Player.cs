@@ -18,6 +18,7 @@ using Intersect.Client.Localization;
 using Intersect.Client.Maps;
 using Intersect.Client.Networking;
 using Intersect.Config.Guilds;
+using Intersect.Framework.Core.GameObjects.Titles;
 using Intersect.Configuration;
 using Intersect.Core;
 using Intersect.Enums;
@@ -66,6 +67,10 @@ public partial class Player : Entity, IPlayer
     IReadOnlyList<IFriendInstance> IPlayer.Friends => Friends;
 
     public List<IFriendInstance> Friends { get; set; } = [];
+
+    public List<TitleDescriptor> UnlockedTitles { get; set; } = [];
+
+    public Guid EquippedTitleId { get; set; } = Guid.Empty;
 
     IReadOnlyList<IHotbarInstance> IPlayer.HotbarSlots => Hotbar.ToList();
 

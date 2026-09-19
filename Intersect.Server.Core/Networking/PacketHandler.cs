@@ -2183,6 +2183,18 @@ internal sealed partial class PacketHandler
         player.CancelQuest(packet.QuestId);
     }
 
+    //EquipTitlePacket
+    public void HandlePacket(Client client, EquipTitlePacket packet)
+    {
+        var player = client?.Entity;
+        if (player == null)
+        {
+            return;
+        }
+
+        player.EquipTitle(packet.TitleId);
+    }
+
     //TradeRequestPacket
     public void HandlePacket(Client client, TradeRequestPacket packet)
     {

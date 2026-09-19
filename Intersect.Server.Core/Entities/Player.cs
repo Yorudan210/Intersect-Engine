@@ -18,7 +18,9 @@ using Intersect.Framework.Core.GameObjects.Maps.Attributes;
 using Intersect.Framework.Core.GameObjects.NPCs;
 using Intersect.Framework.Core.GameObjects.PlayerClass;
 using Intersect.Framework.Core.GameObjects.Quests;
+using Intersect.Framework.Core.GameObjects.Titles;
 using Intersect.Framework.Core.GameObjects.Variables;
+using Intersect.Server.General;
 using Intersect.GameObjects;
 using Intersect.Network;
 using Intersect.Network.Packets.Server;
@@ -7886,6 +7888,80 @@ public partial class Player : Entity
     private Guild _guild;
     private Guid? _pendingGuildInviteFromId;
     private Guid? _pendingGuildInviteToId;
+
+    #endregion
+
+    #region Titles
+
+    [JsonIgnore, Column("UnlockedTitles")]
+    public string UnlockedTitlesJson
+    {
+        get => JsonConvert.SerializeObject(UnlockedTitleIds);
+        set => UnlockedTitleIds = JsonConvert.DeserializeObject<List<Guid>>(value ?? "[]") ?? new List<Guid>();
+    }
+
+    [JsonIgnore] public List<Guid> UnlockedTitleIds { get; set; } = new List<Guid>();
+
+    public Guid EquippedTitleId { get; set; } = Guid.Empty;
+
+    /// <summary>
+    /// Unlocks a title for this player if it exists and isn't already unlocked. Does not equip it.
+    /// </summary>
+    public bool UnlockTitle(Guid titleId)
+    {
+        if (titleId == Guid.Empty || TitleManager.Get(titleId) is null)
+        {
+            return false;
+        }
+
+        if (UnlockedTitleIds.Contains(titleId))
+        {
+            return false;
+        }
+
+        UnlockedTitleIds.Add(titleId);
+        PacketSender.SendUnlockedTitles(this);
+
+        return true;
+    }
+
+    /// <summary>
+    /// Equips a title the player has already unlocked, showing it above their head. Pass
+    /// <see cref="Guid.Empty"/> to remove the currently equipped title instead.
+    /// </summary>
+    public bool EquipTitle(Guid titleId)
+    {
+        if (titleId == Guid.Empty)
+        {
+            return RemoveTitle();
+        }
+
+        var title = TitleManager.Get(titleId);
+        if (title is null || !UnlockedTitleIds.Contains(titleId))
+        {
+            return false;
+        }
+
+        EquippedTitleId = titleId;
+        HeaderLabel = new Label(title.Name, title.Color);
+        PacketSender.SendEntityDataToProximity(this);
+        PacketSender.SendUnlockedTitles(this);
+
+        return true;
+    }
+
+    /// <summary>
+    /// Removes the currently equipped title, if any.
+    /// </summary>
+    public bool RemoveTitle()
+    {
+        EquippedTitleId = Guid.Empty;
+        HeaderLabel = new Label(string.Empty, HeaderLabel.Color);
+        PacketSender.SendEntityDataToProximity(this);
+        PacketSender.SendUnlockedTitles(this);
+
+        return true;
+    }
 
     #endregion
 

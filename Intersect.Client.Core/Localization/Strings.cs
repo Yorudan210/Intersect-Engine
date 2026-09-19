@@ -1236,6 +1236,21 @@ public static partial class Strings
         public static LocalizedString Title = @"Friends";
     }
 
+    public partial struct Titles
+    {
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public static LocalizedString Title = @"Titles";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public static LocalizedString Equip = @"Equip";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public static LocalizedString RemoveTitle = @"Remove Title";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public static LocalizedString None = @"You haven't unlocked any titles yet.";
+    }
+
     public partial struct GameMenu
     {
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

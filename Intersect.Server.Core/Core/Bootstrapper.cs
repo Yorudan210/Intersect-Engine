@@ -235,6 +235,8 @@ internal static class Bootstrapper
 
         Formulas.LoadFormulas();
 
+        Intersect.Server.General.TitleManager.LoadTitles();
+
         CustomColors.Load();
 
         if (Options.Instance.Metrics.Enable)

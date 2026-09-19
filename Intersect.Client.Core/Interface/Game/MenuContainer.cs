@@ -47,6 +47,8 @@ public partial class MenuContainer : Panel
     private readonly Button _guildButton;
     private readonly GuildWindow _guildWindow;
 
+    private readonly Titles.TitlesWindow _titlesWindow;
+
     private readonly ImagePanel _escapeMenuButtonContainer;
     private readonly Button _escapeMenuButton;
 
@@ -241,6 +243,7 @@ public partial class MenuContainer : Panel
         _questsWindow = new QuestsWindow(gameCanvas: gameCanvas);
         _mapItemWindow = new MapItemWindow(gameCanvas: gameCanvas);
         _guildWindow = new GuildWindow(gameCanvas: gameCanvas);
+        _titlesWindow = new Titles.TitlesWindow(gameCanvas: gameCanvas);
     }
 
     //Methods
@@ -254,6 +257,7 @@ public partial class MenuContainer : Panel
         _questsWindow.Update(updateQuestLog);
         _mapItemWindow.Update();
         _guildWindow.Update();
+        _titlesWindow.Update();
     }
 
     public void UpdateFriendsList()
@@ -264,6 +268,11 @@ public partial class MenuContainer : Panel
     public void UpdateGuildList()
     {
         _guildWindow.UpdateList();
+    }
+
+    public void UpdateTitlesList()
+    {
+        _titlesWindow.UpdateList();
     }
 
     // ReSharper disable once MemberCanBePrivate.Global
@@ -281,6 +290,7 @@ public partial class MenuContainer : Panel
         _questsWindow.Hide();
         _spellsWindow.Hide();
         _guildWindow.Hide();
+        _titlesWindow.Hide();
     }
 
     public void ToggleCharacterWindow()
@@ -311,6 +321,22 @@ public partial class MenuContainer : Panel
         }
 
         return _friendsWindow.IsVisible;
+    }
+
+    public bool ToggleTitlesWindow()
+    {
+        if (_titlesWindow.IsVisible)
+        {
+            _titlesWindow.Hide();
+        }
+        else
+        {
+            HideWindows();
+            _titlesWindow.UpdateList();
+            _titlesWindow.Show();
+        }
+
+        return _titlesWindow.IsVisible;
     }
 
     public bool ToggleGuildWindow()
@@ -417,6 +443,8 @@ public partial class MenuContainer : Panel
         _partyWindow.Hide();
 
         _guildWindow.Hide();
+
+        _titlesWindow.Hide();
     }
 
     public bool HasWindowsOpen()
@@ -427,7 +455,8 @@ public partial class MenuContainer : Panel
                           _questsWindow.IsVisible() ||
                           _spellsWindow.IsVisibleInTree ||
                           _partyWindow.IsVisible() ||
-                          _guildWindow.IsVisibleInTree;
+                          _guildWindow.IsVisibleInTree ||
+                          _titlesWindow.IsVisible;
         return windowsOpen;
     }
 

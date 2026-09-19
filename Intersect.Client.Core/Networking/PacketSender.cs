@@ -421,6 +421,11 @@ public static partial class PacketSender
         Network.SendPacket(new UpdateFriendsPacket(name, false));
     }
 
+    public static void SendEquipTitle(Guid titleId)
+    {
+        Network.SendPacket(new EquipTitlePacket(titleId));
+    }
+
     public static void SendFriendRequestAccept(Object? sender, EventArgs e)
     {
         if (sender is InputBox inputBox && inputBox.UserData is Guid requestId)

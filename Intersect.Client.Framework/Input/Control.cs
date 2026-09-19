@@ -42,6 +42,8 @@ public enum Control
 
     OpenGuild,
 
+    OpenTitles,
+
     OpenSettings,
 
     OpenDebugger,

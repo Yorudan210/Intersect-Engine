@@ -455,6 +455,24 @@ public static partial class Strings
         public readonly LocalizedString ServerInfo = @"Server has:";
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocalizedString TitleNotFound = @"No title named '{00}' was found.";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocalizedString TitleUnlocked = @"{00} has unlocked the title '{01}'.";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocalizedString TitleAlreadyUnlocked = @"{00} already has the title '{01}'.";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocalizedString TitleEquipped = @"{00} is now displaying the title '{01}'.";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocalizedString TitleNotUnlocked = @"{00} has not unlocked the title '{01}' yet.";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public readonly LocalizedString TitleRemoved = @"{00}'s title has been removed.";
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public readonly LocalizedString SpellCount = @" - {00} Spells.";
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

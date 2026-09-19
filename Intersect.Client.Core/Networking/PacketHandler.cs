@@ -2181,6 +2181,25 @@ internal sealed partial class PacketHandler
         Interface.Interface.EnqueueInGame(gameInterface => gameInterface.NotifyUpdateFriendsList());
     }
 
+    //UnlockedTitlesPacket
+    public void HandlePacket(IPacketSender packetSender, UnlockedTitlesPacket packet)
+    {
+        if (Globals.Me == null)
+        {
+            return;
+        }
+
+        Globals.Me.UnlockedTitles = packet.UnlockedTitles;
+        Globals.Me.EquippedTitleId = packet.EquippedTitleId;
+
+        if (!Interface.Interface.HasInGameUI)
+        {
+            return;
+        }
+
+        Interface.Interface.EnqueueInGame(gameInterface => gameInterface.GameMenu?.UpdateTitlesList());
+    }
+
     //FriendRequestPacket
     public void HandlePacket(IPacketSender packetSender, FriendRequestPacket packet)
     {
