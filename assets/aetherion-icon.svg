@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="440 16 720 720" width="512" height="512">
+<title>Aetherion icon</title>
+<defs>
+  <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff4c8"/><stop offset=".35" stop-color="#f2c75c"/>
+    <stop offset=".7" stop-color="#b8801f"/><stop offset="1" stop-color="#7a4d12"/>
+  </linearGradient>
+  <linearGradient id="goldText" x1="0" y1="725" x2="0" y2="880" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#fffbe6"/><stop offset=".3" stop-color="#f7d57a"/>
+    <stop offset=".55" stop-color="#d49a2e"/><stop offset=".58" stop-color="#a86e17"/>
+    <stop offset=".8" stop-color="#e0ac45"/><stop offset="1" stop-color="#8a5a14"/>
+  </linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#6d7f93"/><stop offset=".48" stop-color="#eef4fb"/>
+    <stop offset=".52" stop-color="#b9c6d4"/><stop offset="1" stop-color="#55667a"/>
+  </linearGradient>
+  <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#27306b"/><stop offset=".6" stop-color="#141a45"/><stop offset="1" stop-color="#0a0d26"/>
+  </linearGradient>
+  <linearGradient id="featherBack" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#9fbfe0"/><stop offset="1" stop-color="#e8f3ff"/>
+  </linearGradient>
+  <linearGradient id="featherMid" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c3dbf2"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <linearGradient id="featherFront" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#dfeeff"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <radialGradient id="aura" cx="800" cy="372" r="150" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#9ff4ff" stop-opacity=".95"/><stop offset=".45" stop-color="#3fb8ff" stop-opacity=".35"/>
+    <stop offset="1" stop-color="#3fb8ff" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="halo" cx="800" cy="360" r="520" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#7fd8ff" stop-opacity=".28"/><stop offset="1" stop-color="#7fd8ff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".55"/>
+  </filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+
+<g filter="url(#shadow)">
+  <!-- wings -->
+  <!-- sword behind shield -->
+  <path d="M780,150 L820,150 L820,640 L800,735 L780,640 Z" fill="url(#steel)" stroke="#2b3542" stroke-width="3"/>
+  <path d="M800,150 L800,728" stroke="#ffffff" stroke-width="1.5" opacity=".6"/>
+  <rect x="786" y="58" width="28" height="70" rx="6" fill="#4a2a12" stroke="#2a160a" stroke-width="3"/>
+  <path d="M786,70 L814,82 M786,88 L814,100 M786,106 L814,118" stroke="#c9a24a" stroke-width="3"/>
+  <path d="M680,128 Q740,112 800,122 Q860,112 920,128 Q930,135 920,142 Q860,136 800,146 Q740,136 680,142 Q670,135 680,128 Z" fill="url(#gold)" stroke="#5a3a0e" stroke-width="3"/>
+  <circle cx="676" cy="135" r="11" fill="url(#gold)" stroke="#5a3a0e" stroke-width="3"/>
+  <circle cx="924" cy="135" r="11" fill="url(#gold)" stroke="#5a3a0e" stroke-width="3"/>
+  <circle cx="800" cy="44" r="20" fill="url(#gold)" stroke="#5a3a0e" stroke-width="3"/>
+  <circle cx="800" cy="44" r="8" fill="#5ee3ff" filter="url(#glow)"/>
+
+  <!-- shield -->
+  <path d="M615,172 Q800,138 985,172 L985,370 Q985,535 800,628 Q615,535 615,370 Z" fill="url(#gold)" stroke="#4a2f0b" stroke-width="4"/>
+  <path d="M640,194 Q800,164 960,194 L960,370 Q960,515 800,600 Q640,515 640,370 Z" fill="url(#field)" stroke="#5a3a0e" stroke-width="3"/>
+  <path d="M652,204 Q800,176 948,204 L948,370 Q948,506 800,586 Q652,506 652,370 Z" fill="none" stroke="#c9a24a" stroke-width="1.5" stroke-dasharray="2 7" opacity=".8"/>
+  <!-- corner fleurons -->
+  <path d="M800.0,152.0 L804.2,163.8 L816.0,168.0 L804.2,172.2 L800.0,184.0 L795.8,172.2 L784.0,168.0 L795.8,163.8 Z" fill="url(#gold)" stroke="#4a2f0b" stroke-width="2"/>
+
+  <!-- aether ring and crystal -->
+  <circle cx="800" cy="372" r="150" fill="url(#aura)"/>
+  <circle cx="800" cy="372" r="118" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="800" cy="372" r="104" fill="none" stroke="#9fe8ff" stroke-width="1.5" stroke-dasharray="1 9" stroke-linecap="round" opacity=".9"/>
+  <path transform="rotate(0 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(30 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(60 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(90 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(120 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(150 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(180 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(210 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(240 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(270 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(300 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(330 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/>
+  <g stroke="#0c2a4a" stroke-width="2" stroke-linejoin="round">
+    <path d="M800,278 L842,372 L800,468 L758,372 Z" fill="#43c6ff"/>
+    <path d="M800,278 L842,372 L800,392 Z" fill="#bff6ff"/>
+    <path d="M800,278 L758,372 L800,392 Z" fill="#7fe0ff"/>
+    <path d="M758,372 L800,392 L800,468 Z" fill="#1f7fd0"/>
+    <path d="M842,372 L800,392 L800,468 Z" fill="#2ea3ec"/>
+  </g>
+  <path d="M800,278 L808,340 L800,392" stroke="#ffffff" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M800.0,260.0 L803.5,296.5 L840.0,300.0 L803.5,303.5 L800.0,340.0 L796.5,303.5 L760.0,300.0 L796.5,296.5 Z" fill="#ffffff" opacity=".85" filter="url(#glow)"/>
+  <path d="M708.0,277.0 L710.1,283.9 L717.0,286.0 L710.1,288.1 L708.0,295.0 L705.9,288.1 L699.0,286.0 L705.9,283.9 Z" fill="#dff8ff" filter="url(#glow)"/>
+  <path d="M894.0,441.0 L896.1,449.9 L905.0,452.0 L896.1,454.1 L894.0,463.0 L891.9,454.1 L883.0,452.0 L891.9,449.9 Z" fill="#dff8ff" filter="url(#glow)"/>
+  <path d="M890.0,278.0 L891.4,282.6 L896.0,284.0 L891.4,285.4 L890.0,290.0 L888.6,285.4 L884.0,284.0 L888.6,282.6 Z" fill="#dff8ff"/>
+  <path d="M712.0,456.0 L713.4,460.6 L718.0,462.0 L713.4,463.4 L712.0,468.0 L710.6,463.4 L706.0,462.0 L710.6,460.6 Z" fill="#dff8ff"/>
+</g>
+
+</svg>

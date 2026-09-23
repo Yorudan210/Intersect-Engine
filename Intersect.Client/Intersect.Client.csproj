@@ -19,6 +19,7 @@
 		<AppDesignerFolder>Properties</AppDesignerFolder>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
 		<FileAlignment>512</FileAlignment>
+		<ApplicationIcon>$(IntersectRepoPath)\assets\aetherion-icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -34,7 +35,7 @@
 	</ItemGroup>
 
 	<ItemGroup Label="Project Embedded Resources">
-		<EmbeddedResource Include="$(IntersectRepoPath)\assets\intersect-logo-qu.bmp">
+		<EmbeddedResource Include="$(IntersectRepoPath)\assets\aetherion-icon.bmp">
 			<LogicalName>Icon.bmp</LogicalName>
 		</EmbeddedResource>
 	</ItemGroup>
