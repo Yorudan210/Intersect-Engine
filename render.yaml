@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: aetherion-site
+    runtime: static
+    branch: claude/admiring-ritchie-ipryrl
+    buildCommand: echo "Static site, no build step"
+    staticPublishPath: ./website
+    buildFilter:
+      paths:
+        - website/**
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aetherion</title>
+  <meta name="description" content="Aetherion, un MMORPG 2D médiéval fantastique. Téléchargez le launcher et rejoignez l'aventure.">
+  <meta property="og:title" content="Aetherion">
+  <meta property="og:description" content="Un MMORPG 2D médiéval fantastique.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta name="theme-color" content="#0b1030">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav-brand" href="#top">
+      <img src="assets/favicon.png" alt="" width="32" height="32">
+      <span>Aetherion</span>
+    </a>
+    <nav>
+      <a href="#monde">Le monde</a>
+      <a href="#jeu">Le jeu</a>
+      <a href="#telecharger" class="nav-cta">Jouer</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-logo" src="assets/logo.png" alt="Aetherion" width="720" height="450">
+      <p class="hero-tagline">Un royaume suspendu entre ciel et éther vous attend.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#telecharger">Télécharger le jeu</a>
+        <a class="btn btn-ghost" href="#monde">Découvrir le monde</a>
+      </div>
+    </section>
+
+    <section id="monde" class="section">
+      <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <h2>Le monde d'Aetherion</h2>
+      <p class="lead">
+        Des citadelles couronnées de cristaux d'éther, des îles qui flottent au-dessus des nuages,
+        des forêts où l'éther brille dans la nuit : explorez un monde médiéval fantastique
+        où chaque région cache ses légendes et ses dangers.
+      </p>
+    </section>
+
+    <section id="jeu" class="section">
+      <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <h2>Le jeu</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 4 L28 30 L24 36 L20 30 Z M14 30 H34 M24 36 V44" /></svg>
+          </div>
+          <h3>Combattez</h3>
+          <p>Affrontez monstres et créatures légendaires, seul ou avec vos compagnons d'armes.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 4 L34 18 L24 44 L14 18 Z M14 18 H34 M24 4 V44" /></svg>
+          </div>
+          <h3>Progressez</h3>
+          <p>Gagnez de l'expérience, maîtrisez de nouveaux sorts et forgez votre équipement.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 10 H40 V26 C40 36 24 44 24 44 C24 44 8 36 8 26 Z M24 10 V44 M8 22 H40" /></svg>
+          </div>
+          <h3>Rejoignez</h3>
+          <p>Formez une guilde, commercez avec les autres joueurs et écrivez l'histoire du royaume.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="telecharger" class="section download">
+      <div class="ornament" aria-hidden="true"><span></span><i></i><span></span></div>
+      <h2>Rejoindre l'aventure</h2>
+      <p class="lead">Téléchargez le launcher, installez-le et connectez-vous au royaume.</p>
+      <a class="btn btn-gold btn-lg" href="https://github.com/Yorudan210/aetherion-releases/releases/latest" rel="noopener">
+        Télécharger pour Windows
+      </a>
+      <ol class="steps">
+        <li><strong>Téléchargez</strong> le launcher depuis la page des versions.</li>
+        <li><strong>Lancez</strong> Aetherion Launcher, il installe et met à jour le jeu.</li>
+        <li><strong>Créez</strong> votre compte en jeu et choisissez votre héros.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/favicon.png" alt="" width="28" height="28">
+    <p>Aetherion &middot; propulsé par <a href="https://www.freemmorpgmaker.com/" rel="noopener">Intersect Engine</a></p>
+  </footer>
+</body>
+</html>
