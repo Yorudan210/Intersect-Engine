@@ -30,9 +30,6 @@
     <stop offset="0" stop-color="#9ff4ff" stop-opacity=".95"/><stop offset=".45" stop-color="#3fb8ff" stop-opacity=".35"/>
     <stop offset="1" stop-color="#3fb8ff" stop-opacity="0"/>
   </radialGradient>
-  <radialGradient id="moon" cx="790" cy="340" r="120" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#f4feff"/><stop offset=".45" stop-color="#9eeaff"/><stop offset="1" stop-color="#2f8fe0"/>
-  </radialGradient>
   <radialGradient id="halo" cx="800" cy="360" r="520" gradientUnits="userSpaceOnUse">
     <stop offset="0" stop-color="#7fd8ff" stop-opacity=".28"/><stop offset="1" stop-color="#7fd8ff" stop-opacity="0"/>
   </radialGradient>
@@ -201,67 +198,24 @@
   <!-- corner fleurons -->
   <path d="M800.0,152.0 L804.2,163.8 L816.0,168.0 L804.2,172.2 L800.0,184.0 L795.8,172.2 L784.0,168.0 L795.8,163.8 Z" fill="url(#gold)" stroke="#4a2f0b" stroke-width="2"/>
 
-  <!-- battle scene: knight vs dragon -->
-  <clipPath id="fieldClip"><path d="M640,194 Q800,164 960,194 L960,370 Q960,515 800,600 Q640,515 640,370 Z"/></clipPath>
-  <g clip-path="url(#fieldClip)">
-    <circle cx="800" cy="372" r="190" fill="url(#aura)"/>
-    <g transform="translate(800,392) scale(1.14) translate(-800,-372)">
-    <circle cx="800" cy="360" r="112" fill="url(#moon)"/>
-    <circle cx="800" cy="360" r="118" fill="none" stroke="url(#gold)" stroke-width="3"/>
-    <circle cx="800" cy="360" r="104" fill="none" stroke="#e8fbff" stroke-width="1.5" stroke-dasharray="1 9" stroke-linecap="round" opacity=".7"/>
-    <path transform="rotate(0 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(30 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(60 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(90 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(120 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(150 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(180 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(210 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(240 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(270 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(300 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(330 800 360)" d="M800,242 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/>
-    <g fill="#0a0e28" stroke="#0a0e28" stroke-linecap="round" stroke-linejoin="round">
-      <!-- ground -->
-      <path d="M630,486 L672,478 L690,482 L720,474 L760,480 L790,472 L830,479 L870,471 L905,478 L940,470 L975,476 L975,620 L630,620 Z" stroke-width="2"/>
-      <!-- knight: cape -->
-      <path d="M728,372 Q700,392 684,440 Q700,436 712,446 Q712,420 726,404 Z" stroke-width="1"/>
-      <!-- legs -->
-      <path d="M726,420 L708,450 L690,478" fill="none" stroke-width="11"/>
-      <path d="M726,420 L750,444 L754,476" fill="none" stroke-width="11"/>
-      <path d="M682,481 L700,475 L700,483 Z M750,470 L766,478 L748,482 Z" stroke-width="5"/>
-      <!-- torso -->
-      <path d="M714,424 L738,424 L752,380 L728,370 Z" stroke-width="4"/>
-      <!-- head, helmet and plume -->
-      <circle cx="746" cy="358" r="11"/>
-      <path d="M738,349 Q742,340 752,346 L748,350 Z" stroke-width="2"/>
-      <path d="M744,354 L722,344 Q716,334 704,338 Q712,346 720,350 Z" stroke-width="2"/>
-      <!-- shield arm -->
-      <path d="M746,382 L760,396" fill="none" stroke-width="9"/>
-      <path d="M754,384 L776,388 L774,410 L764,424 L754,410 Z" stroke-width="2"/>
-      <!-- sword arm raised -->
-      <path d="M738,378 L744,356 L760,340" fill="none" stroke-width="8"/>
-      <!-- dragon: wings -->
-      <path d="M868,402 L884,290 L900,318 L924,272 L926,318 L952,300 L940,346 L958,352 L924,392 Q904,382 888,410 Z" stroke-width="2"/>
-      <path d="M876,400 L858,296 L850,322 L832,300 L842,356 Q852,372 862,404 Z" stroke-width="2" opacity=".9"/>
-      <!-- body -->
-      <ellipse cx="880" cy="436" rx="38" ry="28" transform="rotate(-35 880 436)"/>
-      <!-- neck and head -->
-      <path d="M862,420 Q874,372 848,338" fill="none" stroke-width="20"/>
-      <path d="M856,326 L816,322 L806,330 L846,340 Z" stroke-width="4"/>
-      <path d="M848,342 L818,354 L812,350 L842,334 Z" stroke-width="3"/>
-      <path d="M852,324 L876,300 L860,332 Z M846,326 L858,304 L848,330 Z" stroke-width="2"/>
-      <path d="M866,392 l10,-6 -4,11 Z M866,376 l11,-4 -6,10 Z M860,360 l11,-2 -7,9 Z M852,346 l10,0 -8,8 Z M902,420 l10,-8 -2,12 Z M912,432 l11,-6 -4,11 Z" stroke-width="2"/>
-      <!-- claws raised -->
-      <path d="M864,410 L842,398 L826,404" fill="none" stroke-width="8"/>
-      <path d="M826,404 L814,396 M826,404 L812,406 M826,404 L816,414" fill="none" stroke-width="3"/>
-      <!-- hind leg -->
-      <path d="M896,450 L908,466 L896,478" fill="none" stroke-width="13"/>
-      <path d="M886,480 L906,476 L900,484 Z" stroke-width="4"/>
-      <!-- tail -->
-      <path d="M906,452 Q950,470 936,462" fill="none" stroke-width="12"/>
-      <path d="M912,456 Q960,480 920,474" fill="none" stroke-width="7"/>
-    </g>
-    <path d="M745,356 L757,354" stroke="#bff3ff" stroke-width="2" stroke-linecap="round"/>
-    <!-- sword blade -->
-    <path d="M756,344 L804,302" stroke="#f2fdff" stroke-width="4.5" stroke-linecap="round" filter="url(#glow)"/>
-    <path d="M752,336 L766,350" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
-    <!-- dragon eye and fire of clash -->
-    <circle cx="840" cy="328" r="2.4" fill="#ff5a2a"/>
-    <path d="M806.0,282.0 L808.8,301.2 L828.0,304.0 L808.8,306.8 L806.0,326.0 L803.2,306.8 L784.0,304.0 L803.2,301.2 Z" fill="#ffffff" filter="url(#glow)"/>
-    <path d="M700.0,291.0 L702.1,297.9 L709.0,300.0 L702.1,302.1 L700.0,309.0 L697.9,302.1 L691.0,300.0 L697.9,297.9 Z" fill="#dff8ff" filter="url(#glow)"/>
-    <path d="M900.0,244.0 L901.4,248.6 L906.0,250.0 L901.4,251.4 L900.0,256.0 L898.6,251.4 L894.0,250.0 L898.6,248.6 Z" fill="#dff8ff"/>
-    </g>
+  <!-- aether ring and crystal -->
+  <circle cx="800" cy="372" r="150" fill="url(#aura)"/>
+  <circle cx="800" cy="372" r="118" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <circle cx="800" cy="372" r="104" fill="none" stroke="#9fe8ff" stroke-width="1.5" stroke-dasharray="1 9" stroke-linecap="round" opacity=".9"/>
+  <path transform="rotate(0 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(30 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(60 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(90 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(120 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(150 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(180 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(210 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(240 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(270 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(300 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/><path transform="rotate(330 800 372)" d="M800,254 l7,11 -7,11 -7,-11 Z" fill="url(#gold)"/>
+  <g stroke="#0c2a4a" stroke-width="2" stroke-linejoin="round">
+    <path d="M800,278 L842,372 L800,468 L758,372 Z" fill="#43c6ff"/>
+    <path d="M800,278 L842,372 L800,392 Z" fill="#bff6ff"/>
+    <path d="M800,278 L758,372 L800,392 Z" fill="#7fe0ff"/>
+    <path d="M758,372 L800,392 L800,468 Z" fill="#1f7fd0"/>
+    <path d="M842,372 L800,392 L800,468 Z" fill="#2ea3ec"/>
   </g>
+  <path d="M800,278 L808,340 L800,392" stroke="#ffffff" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M800.0,260.0 L803.5,296.5 L840.0,300.0 L803.5,303.5 L800.0,340.0 L796.5,303.5 L760.0,300.0 L796.5,296.5 Z" fill="#ffffff" opacity=".85" filter="url(#glow)"/>
+  <path d="M708.0,277.0 L710.1,283.9 L717.0,286.0 L710.1,288.1 L708.0,295.0 L705.9,288.1 L699.0,286.0 L705.9,283.9 Z" fill="#dff8ff" filter="url(#glow)"/>
+  <path d="M894.0,441.0 L896.1,449.9 L905.0,452.0 L896.1,454.1 L894.0,463.0 L891.9,454.1 L883.0,452.0 L891.9,449.9 Z" fill="#dff8ff" filter="url(#glow)"/>
+  <path d="M890.0,278.0 L891.4,282.6 L896.0,284.0 L891.4,285.4 L890.0,290.0 L888.6,285.4 L884.0,284.0 L888.6,282.6 Z" fill="#dff8ff"/>
+  <path d="M712.0,456.0 L713.4,460.6 L718.0,462.0 L713.4,463.4 L712.0,468.0 L710.6,463.4 L706.0,462.0 L710.6,460.6 Z" fill="#dff8ff"/>
 </g>
 
 <!-- wordmark -->
